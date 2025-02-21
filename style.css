@@ -21,19 +21,26 @@ body {
 
 /*------------------------------------------------------------------------- cabeçalho -------------------------------------------------------------------------*/
 .cabecalho {
-  display: flex; /*para chamar o flex box*/
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px; /*distância do topo da página*/
-  position: sticky;
-  top: 0;
-  background-color: rgba(10, 10, 10, 0.5); /* cor do fundo*/
-  z-index: 1000;
-  padding: 10px 20px;
-  box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.1); 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: transparent; /* Começa transparente */
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: none; /* Sem sombra no início */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Quando rolar a página, aplicamos essa classe */
+.cabecalho.solid {
+    /*background-color: rgba(10, 10, 10, 0.9); /* Cor sólida ao rolar */
+    background-color: rgba(10, 10, 10); /* Cor sólida ao rolar */
+    box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.3); /* Adiciona sombra */
+}
 
 .cabecalho-imagem { /*tamamanho da imagem estava em 72*/
   height: 72px; /*tamanho normal 72*/
