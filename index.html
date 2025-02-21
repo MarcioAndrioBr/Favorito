@@ -141,7 +141,89 @@
 
     </main>
 
- <!-- rodapé -->   
+<!----------------------------------------------------------Lembrete---------------------------------------------------------->            
+
+    <div class="lembretes">
+        <h2>Lembretes</h2>
+        <ul id="lista-lembretes"></ul>
+        <input type="text" id="novo-lembrete" placeholder="Digite um lembrete">
+        <button onclick="adicionarLembrete()">Adicionar</button>
+    </div>
+
+<!-- java -->
+    <script>
+        document.addEventListener("DOMContentLoaded", carregarLembretes); // Carrega os lembretes ao iniciar
+        
+        function adicionarLembrete() {
+            var input = document.getElementById("novo-lembrete");
+            var texto = input.value.trim();
+            
+            if (texto !== "") {
+                criarLembrete(texto, false); // Adiciona na interface
+                salvarLembretes(); // Atualiza o armazenamento
+                input.value = ""; // Limpa o campo
+            }
+        }
+        
+        // Função para criar um lembrete na interface
+        function criarLembrete(texto, concluido) {
+            var lista = document.getElementById("lista-lembretes");
+        
+            var item = document.createElement("li");
+        
+            var checkbox = document.createElement("div");
+            checkbox.classList.add("checkbox");
+            if (concluido) {
+                checkbox.classList.add("checked");
+            }
+            checkbox.onclick = function() {
+                checkbox.classList.toggle("checked");
+                salvarLembretes(); // Atualiza no armazenamento
+            };
+        
+            var span = document.createElement("span");
+            span.textContent = texto;
+        
+            var botaoExcluir = document.createElement("button");
+            botaoExcluir.textContent = "🗑️"; // Ícone de lixeira
+            botaoExcluir.classList.add("delete-btn");
+            botaoExcluir.onclick = function() {
+                item.remove();
+                salvarLembretes(); // Atualiza o armazenamento
+            };
+        
+            item.appendChild(checkbox);
+            item.appendChild(span);
+            item.appendChild(botaoExcluir);
+            lista.appendChild(item);
+        }
+        
+        // Função para salvar lembretes no LocalStorage
+        function salvarLembretes() {
+            var lembretes = [];
+            document.querySelectorAll("#lista-lembretes li").forEach(function(item) {
+                lembretes.push({
+                    texto: item.querySelector("span").textContent,
+                    concluido: item.querySelector(".checkbox").classList.contains("checked")
+                });
+            });
+            localStorage.setItem("lembretes", JSON.stringify(lembretes));
+        }
+        
+        // Função para carregar os lembretes ao iniciar
+        function carregarLembretes() {
+            var lista = document.getElementById("lista-lembretes");
+            var lembretesSalvos = localStorage.getItem("lembretes");
+        
+            if (lembretesSalvos) {
+                JSON.parse(lembretesSalvos).forEach(function(lembrete) {
+                    criarLembrete(lembrete.texto, lembrete.concluido);
+                });
+            }
+        }
+        </script>
+        
+ <!----------------------------------------------------------rodapé---------------------------------------------------------->        
     <footer>
        
     </footer>

@@ -18,7 +18,6 @@ body {
     background-size: cover; /* Redimensiona a imagem para cobrir a tela */
 }
 
-
 /*------------------------------------------------------------------------- cabeçalho -------------------------------------------------------------------------*/
 .cabecalho {
     display: flex;
@@ -154,4 +153,79 @@ transform: scale(1.1);
 a:hover:before {
 transform: translateX(100%);
 }
+
+/*------------------------------------------------------------------------- lembrete -------------------------------------------------------------------------*/
+.lembretes {
+    width: 300px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    /* Posiciona no canto inferior direito */
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px;  /* Distância da lateral */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox.checked {
+    background: #4caf50;
+}
+
+input {
+    width: 80%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+    color: red;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
+
+
+
+
 
