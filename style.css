@@ -18,6 +18,22 @@ body {
     background-size: cover; /* Redimensiona a imagem para cobrir a tela */
 }
 
+@media (max-width: 768px) {  /* Ajustes para telas menores */
+    .lembretes {
+        width: 90%; /* Ocupa mais espaço na tela menor */
+        bottom: 10px; /* Ajusta a posição */
+        right: 10px;
+    }
+
+    .cabecalho {
+        flex-direction: column; /* Empilha os itens do cabeçalho */
+        padding: 5px;
+    }
+
+    .cabecalho-menu-item {
+        font-size: 18px; /* Reduz o tamanho da fonte para caber melhor */
+    }
+}
 /*------------------------------------------------------------------------- cabeçalho -------------------------------------------------------------------------*/
 .cabecalho {
     display: flex;
