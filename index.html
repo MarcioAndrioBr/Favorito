@@ -352,17 +352,24 @@
        
     </footer>
 
-    <script> <!-- texto para o cabeçalho transparente-->
-        document.addEventListener("scroll", function() {
-            var cabecalho = document.querySelector(".cabecalho");
-            if (window.scrollY > 50) { // Quando rolar mais de 50px
-                cabecalho.classList.add("solid");
-            } else {
-                cabecalho.classList.remove("solid");
-            }
-        });
-    </script>
-           
+    <html lang="pt">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Página de Lembretes</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="cabecalho">Cabeçalho da Página</div>
+        
+            <!-- Conteúdo da página -->
+        
+            <script src="header.js"></script> <!-- Link para o arquivo JavaScript -->
+            <script src="scripts.js"></script> <!-- Link para os lembretes -->
+        </body>
+        </html>
+        
+
 </body>
 
 </html>
