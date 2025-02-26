@@ -5,23 +5,13 @@
   text-decoration: none;
 }
 
-body1 {
-    font-size: 100%;
-    /* Define o fundo com a imagem */
-    background: 
-        /*url('img/fundo.jpeg') no-repeat center center fixed; /* Imagem de fundo */
-        linear-gradient(to bottom, #000000, #041c3b); /* Degradê de cima para baixo 3b0404*/
-    background-size: cover; /* Redimensiona a imagem para cobrir a tela */
-
-
-    overflow: hidden; /* Garante que a animação não ultrapasse a tela */
-}
-
 body {
     font-size: 100%;
     /* Define o fundo com o degradê */
     background: linear-gradient(to bottom, #000000, #041c3b); /* Degradê de cima para baixo */
-    background-size: cover; /* Redimensiona a imagem para cobrir a tela */
+    background-attachment: fixed; /* Faz o fundo fixar enquanto o conteúdo rola */
+    background-size: 100% 100%; /* Faz o fundo cobrir toda a tela, independentemente da orientação */
+    height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
 }
 
 @media (max-width: 768px) {  /* Ajustes para telas menores */
