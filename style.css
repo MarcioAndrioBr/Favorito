@@ -5,12 +5,22 @@
   text-decoration: none;
 }
 
-body {
+body1 {
     font-size: 100%;
     /* Define o fundo com a imagem */
     background: 
         /*url('img/fundo.jpeg') no-repeat center center fixed; /* Imagem de fundo */
         linear-gradient(to bottom, #000000, #041c3b); /* Degradê de cima para baixo 3b0404*/
+    background-size: cover; /* Redimensiona a imagem para cobrir a tela */
+
+
+    overflow: hidden; /* Garante que a animação não ultrapasse a tela */
+}
+
+body {
+    font-size: 100%;
+    /* Define o fundo com o degradê */
+    background: linear-gradient(to bottom, #000000, #041c3b); /* Degradê de cima para baixo */
     background-size: cover; /* Redimensiona a imagem para cobrir a tela */
 }
 
@@ -178,17 +188,15 @@ body {
 .targeta-redonda.youtube { background-color: #FF0000; }
 .targeta-redonda.doc { background-color: #1e6f1e; }
 
-
-
-
-
-
-
-
-
-
 .label {
     font-size: 18px;
     font-weight: bold;
     color: #333;
+}
+
+.gif-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 250px; /* Ajuste o tamanho conforme necessário */
 }
