@@ -1,35 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
 body {
     font-size: 100%;
-    /* Define o fundo com o degradê */
-    background: linear-gradient(to bottom, #000000, #041c3b); /* Degradê de cima para baixo */
+ 
+    background: linear-gradient(to bottom, #6d6b6b, #041c3b); /* Degradê de cima para baixo */
     background-attachment: fixed; /* Faz o fundo fixar enquanto o conteúdo rola */
     background-size: 100% 100%; /* Faz o fundo cobrir toda a tela, independentemente da orientação */
     height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
 }
-
-@media (max-width: 768px) {  /* Ajustes para telas menores */
-    .lembretes {
-        width: 90%; /* Ocupa mais espaço na tela menor */
-        bottom: 10px; /* Ajusta a posição */
-        right: 10px;
-    }
-    .cabecalho {
-        flex-direction: column; /* Empilha os itens do cabeçalho */
-        padding: 5px;
-    }
-    .cabecalho-menu-item {
-        font-size: 18px; /* Reduz o tamanho da fonte para caber melhor */
-    }
-}
-
-/*------------------------------------------------------------------------- cabeçalho -------------------------------------------------------------------------*/
 .cabecalho {
     display: flex;
     flex-direction: row;
@@ -44,33 +20,22 @@ body {
     box-shadow: none; /* Sem sombra no início */
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-/* Quando rolar a página, aplicamos essa classe */
-.cabecalho.solid {
-    /*background-color: rgba(10, 10, 10, 0.9); /* Cor sólida ao rolar */
-    background-color: rgba(10, 10, 10); /* Cor sólida ao rolar */
-    box-shadow: 0px 4px 6px rgba(10, 10, 10, 0.3); /* Adiciona sombra */
-}
-
 .cabecalho-imagem { /*tamamanho da imagem estava em 72*/
-  height: 72px; /*tamanho normal 72*/
-  align-items: center;
-  filter: invert(1); /* inverter a cor */
-}
-
+    height: 72px; /*tamanho normal 72*/
+    align-items: center;
+    /*filter: invert(1); /* inverter a cor */
+  }
 .cabecalho-menu {
-  display: flex;
-  align-items: center;
-  align-self: center;
-  gap: 32px;
-} 
-
-/* Remove o estilo de botão apenas dos links do cabeçalho */
-.cabecalho-menu-item {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 22px;
+  } 
+.cabecalho-link {
     display: inline; /* Remove o display de botão */
     padding: 0; /* Remove espaçamentos internos */
     text-decoration: none; /* Remove sublinhado */
-    color: #fbf7f7; /* Mantém a cor do texto */
+    color: #040404; /* Mantém a cor do texto */
     font-size: 24px; /* Mantém o tamanho da fonte */
     font-weight: 400; /* Mantém a espessura */
     background: none; /* Remove fundo */
@@ -79,114 +44,105 @@ body {
     transition: color 0.3s ease-in-out; /* Mantém apenas um efeito de transição suave */
     text-transform: capitalize;  
 }
-.cabecalho-menu-item:hover {
+.cabecalho-link:hover {
     background: none !important; /* Remove fundo no hover */
     border: none !important; /* Remove borda no hover */
     box-shadow: none !important; /* Remove sombra no hover */
     outline: none !important; /* Remove contorno (se houver) */
+    color: rgb(246, 244, 244); /* Efeito hover simples */
 }
-
-.cabecalho-menu-item1:hover { /* o número 1 skipou o efeito sombra*/
-    color: rgb(50, 50, 50); /* Efeito hover simples */
-}
-
-/*------------------------------------------------------------------------- para a tela no head -------------------------------------------------------------------------*/
-#advocaciaeu {
-    scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
-}
-
 #advocaciabr {
     scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
-
-/*------------------------------------------------------------------------- principal -------------------------------------------------------------------------*/
 .titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    margin: 40px 0;
-    color: #bebbbb;
-    text-shadow: 2px 2px 5px rgba(7, 6, 6, 0.9); /* Adiciona sombra ao texto */
+    /*margin: 40px 0; /*ditância*/
+    /*color: #bebbbb; /**/
+    /*text-shadow: 2px 2px 5px rgba(7, 6, 6, 0.9); /* Adiciona sombra ao texto */
 }
-
-/*-------------------------------------------------------------------------novo-------------------------------------------------------------------------*/
-.organizacao{
+.organizar{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 24px; /* Espaçamento entro os botões*/
-}
-.organizacao-line {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px; /* Espaçamento entre os botões */
-    margin-bottom: 20px; /* Espaço abaixo de cada botão */
-}
-.organizacao-down {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px; /* Espaçamento entre os botões */
-    margin-bottom: 200px; /* Espaço abaixo de cada botão */
 }
 .botao {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    /*gap: 2px;/**/
 }
 .targeta {
     display: flex;
     align-items: center;
-    gap: 10px;
-    background: #9d9797; /* cor da targeta */
+    justify-content: center; /* Adiciona alinhamento no centro horizontal */
+    /*gap: 10px; /**/
+    background: rgba(249, 247, 247, 0.1); /* cor da targeta corrigida para branco com 25% de transparência */
     padding: 10px 15px;
-    border-radius: 30px;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     position: relative;
-    padding-left: 50px;
-}
-.targeta-redonda { /**/
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    font-size: 24px;
-    color: #ffffff;
-    text-decoration: none;
-    position: absolute;
-    left: -5px;
-}
-.targeta-redonda:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-.targeta-redonda.facebook { background-color: #1877F2; }
-.targeta-redonda.twitter { background-color: #1DA1F2; }
-.targeta-redonda.instagram { background-color: #E4405F; }
-.targeta-redonda.law { background-color: #86060b; }
-.targeta-redonda.torrent { background-color: #50C878; }
-.targeta-redonda.eu { background-color: #936c30; }
-.targeta-redonda.tools { background-color: #007BFF; }
-.targeta-redonda.chat { background-color: #FF8C00; }
-.targeta-redonda.server { background-color: #6C757D; }
-.targeta-redonda.youtube { background-color: #FF0000; }
-.targeta-redonda.doc { background-color: #1e6f1e; }
+    width: 40px; /*largura*/
+    height: 40px; /* altura ajustada */
 
-.label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
 }
-
-.gif-container {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 250px; /* Ajuste o tamanho conforme necessário */
+.icone { 
+    display: flex; /**/
+    align-items: center; /**/
+    justify-content: center; /**/
+    border-radius: 50%; /**/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /**/
+    transition: all 0.3s ease-in-out; /**/
+    font-size: 30px; /*tamanho do icone*/
+    text-decoration: none; /* tira o _ do icone*/
+    /*position: absolute; /**/
+    /*left: -5px; /**/
+    /*color: antiquewhite;/**/
+}
+.icone-law { 
+    display: flex; /**/
+    align-items: center; /**/
+    justify-content: center; /**/
+    border-radius: 50%; /**/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /**/
+    transition: all 0.3s ease-in-out; /**/
+    font-size: 30px; /*tamanho do icone*/
+    text-decoration: none; /* tira o _ do icone*/
+    color: rgb(126, 0, 0, 0.7);/**/
+}
+.icone-branco{
+    display: flex; /**/
+    align-items: center; /**/
+    justify-content: center; /**/
+    border-radius: 50%; /**/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /**/
+    transition: all 0.3s ease-in-out; /**/
+    font-size: 30px; /*tamanho do icone*/
+    text-decoration: none; /* tira o _ do icone*/
+    color: rgba(254, 254, 254, 0.5);/**/
+}
+.icone-pdf{
+    display: flex; /**/
+    align-items: center; /**/
+    justify-content: center; /**/
+    border-radius: 50%; /**/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /**/
+    transition: all 0.3s ease-in-out; /**/
+    font-size: 30px; /*tamanho do icone*/
+    text-decoration: none; /* tira o _ do icone*/
+    color: rgb(126, 0, 0, 0.7);/**/
+}
+.icone-local{
+    width: 50px; /**/
+    height: 50px; /**/
+}
+span{
+    text-align: center;
+}
+footer{
+        /*margin-bottom: 20px;    /**/
 }
