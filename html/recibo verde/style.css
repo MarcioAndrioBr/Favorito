@@ -4,20 +4,6 @@ body {
     
     background: url('img/fundo.jpg') no-repeat center fixed;
     background-size: cover;
-    /*opacity: 1;
-    /**/
-    /*background: linear-gradient(to right, 
-        #2b617c, /* Azul inicial */
-        /*rgba(43, 97, 124, 0.5) 2cm, /* Azul com transparência */
-        /*transparent 3cm, 
-        transparent calc(100% - 3cm), 
-        rgba(43, 97, 124, 0.5) calc(100% - 2cm), /* Azul com transparência */
-        /*#2b617c calc(100% - 1cm)), /* Azul final */
-        /*radial-gradient(circle, #2b617c, #a49f97);
-    /*background-size: 100% 100%, auto;
-    background-repeat: no-repeat;
-    background-position: center, center center;
-    /**/
 }
 h1 { /*Título*/
     font-size: 30px;
