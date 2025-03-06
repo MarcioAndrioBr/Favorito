@@ -146,3 +146,46 @@ span{
 footer{
         /*margin-bottom: 20px;    /**/
 }
+#relogio {
+    width: 200px; /* Define a largura do relógio */
+    height: 200px; /* Define a altura do relógio */
+    border-radius: 50%; /* Torna o relógio um círculo */
+    border: 2px solid black; /* Adiciona uma borda ao relógio */
+    position: fixed;
+    bottom: 150px;
+    left: 150px;
+    z-index: 9999;
+    /*background-color: white; /* Adiciona uma cor de fundo branca (opcional) */
+}
+
+#ponteiro-hora, #ponteiro-minuto, #ponteiro-segundo {
+    position: absolute;
+    transform-origin: bottom center;
+}
+
+#ponteiro-hora {
+    width: 6px;
+    height: 50px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+#ponteiro-minuto {
+    width: 4px;
+    height: 70px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+#ponteiro-segundo {
+    width: 2px;
+    height: 90px;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
