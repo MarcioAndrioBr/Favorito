@@ -7,6 +7,12 @@ body {
     background-attachment: fixed; /* Faz o fundo fixar enquanto o conteúdo rola */
     background-size: 100% 100%; /* Faz o fundo cobrir toda a tela, independentemente da orientação */
     height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+
+    display: flex; /* Ativa o Flexbox no body */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0; /* Remove margens padrão do body */
+
 }
 #advocaciabr {
     scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
