@@ -89,3 +89,11 @@ p { /*Parágrafo*/
     color: black; /* Cor do texto */
 
 }
+.texto-blue {
+    background-color: rgba(60, 94, 232, 0.5);
+    color: black; /* Cor do texto */
+
+}
+a{
+    color: black;
+}
