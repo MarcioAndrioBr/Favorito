@@ -1,23 +1,91 @@
-body {
-    font-size: 100%;
-    background: url('img/fundo.jpg') no-repeat center fixed;
-    background-size: cover;
-    opacity: 1;
-    /*background: linear-gradient(to bottom, #6d6b6b, #041c3b); /* Degradê de cima para baixo */
-    background-attachment: fixed; /* Faz o fundo fixar enquanto o conteúdo rola */
-    background-size: 100% 100%; /* Faz o fundo cobrir toda a tela, independentemente da orientação */
-    height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+@media (max-width: 768px) { /* Estilos para telas menores (celulares) */
+    body {
+        font-size: 16px;
+        background: url('img/fundocelular.jpeg') no-repeat center fixed;
+
+        background-size: cover;
+        opacity: 1;
+        
+        background-attachment: fixed; /* Faz o fundo fixar enquanto o conteúdo rola */
+        background-size: 100% 100%; /* Faz o fundo cobrir toda a tela, independentemente da orientação */
+        height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    }
+    .site{
+        display: flex;
+        flex-direction: column; /**/
+        /*flex-direction: row; /**/
+        align-items: center; /**/
+        justify-content: center;
+        gap: 24px;
+    }
+    .relogio-calendario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /**/
+        gap: 24px;
+        position: relative; /* Adicionado para posicionar o container */
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 60px;
+        filter: invert(1);
+        max-width: 250px;
+        height: auto;
+
+        width: 80%; /* Ou outra largura desejada */
+        margin: 0 auto; /* Centraliza o elemento pai horizontalmente */
+    }
+    .conteiner{
+        width: 100%;
+    }
 }
+  
+@media (min-width: 769px) { /* Estilos para telas maiores (tablets e desktops) */
+    body {
+        font-size: 18px;
+        background: url('img/fundodesktop.jpg') no-repeat center fixed;
+        background-size: 100% 100%; /* Faz o fundo cobrir toda a tela, independentemente da orientação */
+        /*height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+        font-size: 100%;
+        background-size: cover;
+        opacity: 1;
+        display: flex; /* Ativa o Flexbox no body */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+    
+    }
+    .site{
+        display: flex;
+        /*flex-direction: column;
+        flex-direction: row; /**/
+        justify-content: center;
+        gap: 24px;
+    }
+    .relogio-calendario {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative; /* Adicionado para posicionar o container */
+    }
+    .logo{
+        display: flex;
+        padding-top: 60px;
+        filter: invert(1);
+        max-width: 500px; /* Define a largura máxima da caixa-icone */
+        height: auto; /* Permite que a altura da caixa-icone se ajuste ao conteúdo */
+    }    
+    .conteiner{
+        width: 80%;
+    }
+}
+
 #advocaciabr {
     scroll-margin-top: 100px; /* Ajuste conforme a altura do cabeçalho */
 }
 /*-----------------------------------------------------Section-----------------------------------------------------*/
-.site{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 24px;
-}
 .caixa-icone {
     display: flex; /* Define a caixa-icone como um flex container */
     padding: 20px; /* Adiciona espaçamento interno à caixa-icone */
@@ -135,20 +203,9 @@ footer{
 span{
     color: rgb(255, 255, 255);
 }
-.logo{
-    display: flex;
-    padding-top: 60px;
-    filter: invert(1);
-    max-width: 500px; /* Define a largura máxima da caixa-icone */
-    height: auto; /* Permite que a altura da caixa-icone se ajuste ao conteúdo */
-}
+
 /*-----------------------------------------------------Relógio e Calendário-----------------------------------------------------*/
-.relogio-calendario {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: relative; /* Adicionado para posicionar o container */
-}
+
 #calendario {
     width: 250px;
 }
