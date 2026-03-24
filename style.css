@@ -6,7 +6,7 @@
         min-height: 100vh;
         
         /* Fundo fixo corrigido */
-        background: url('img/fundocelular.jpeg') no-repeat center center fixed;
+        background: url('img/fundocelular.jpg') no-repeat center center fixed;
         background-size: cover;           /* melhor que 100% 100% na maioria dos casos */
         background-attachment: fixed;     /* mantém o fundo parado enquanto rola */
         
