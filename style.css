@@ -7,7 +7,7 @@
         
         /* Fundo fixo corrigido */
         background: url('img/fundocelular.jpg') no-repeat center center fixed;
-        background-repeat: repeat-y;
+        background-color: rgb(0, 0, 0);
         /*background-size: cover;           /* melhor que 100% 100% na maioria dos casos */
         background-attachment: fixed;     /* mantém o fundo parado enquanto rola */
         
