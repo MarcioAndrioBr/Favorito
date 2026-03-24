@@ -7,7 +7,8 @@
         
         /* Fundo fixo corrigido */
         background: url('img/fundocelular.jpg') no-repeat center center fixed;
-        background-size: cover;           /* melhor que 100% 100% na maioria dos casos */
+        background-size: 10cm;           /* Para caber na tela do iphone */
+        /*background-size: cover;           /* melhor que 100% 100% na maioria dos casos */
         background-attachment: fixed;     /* mantém o fundo parado enquanto rola */
         
         /* Remove qualquer coisa que possa fazer o fundo se mover */
