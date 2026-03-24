@@ -1,14 +1,17 @@
 @media (max-width: 768px) { /* Estilos para telas menores (celulares) */
     body {
+        margin: 0;
+        padding: 0;
         font-size: 16px;
-        background: url('img/fundocelular.jpeg') no-repeat center fixed;
-
-        background-size: cover;
-        opacity: 1;
+        min-height: 100vh;
         
-        background-attachment: fixed; /* Faz o fundo fixar enquanto o conteúdo rola */
-        background-size: 100% 100%; /* Faz o fundo cobrir toda a tela, independentemente da orientação */
-        height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+        /* Fundo fixo corrigido */
+        background: url('img/fundocelular.jpeg') no-repeat center center fixed;
+        background-size: cover;           /* melhor que 100% 100% na maioria dos casos */
+        background-attachment: fixed;     /* mantém o fundo parado enquanto rola */
+        
+        /* Remove qualquer coisa que possa fazer o fundo se mover */
+        overflow-x: hidden;
     }
     .site{
         display: flex;
