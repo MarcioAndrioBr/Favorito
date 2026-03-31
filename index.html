@@ -771,8 +771,19 @@
                 <span>ClassRoom</span>
             </div>
 
+            <div class="botao">
+                <div class="targeta">
+                    <a href="#" class="icone" id="btn-alexa-victor">
+                        <img width="48" height="48" 
+                            src="https://img.icons8.com/external-ddara-flat-ddara/64/external-delivery-delivery-services-ddara-flat-ddara-4.png" 
+                            alt="calendar--v2"/>
+                    </a>             
+            </div>
+            <span>Victor Andrio<br>Alexa</span>
+</div>
+
     </div>       
-        
+
 </section>
 
 <!-- Pop-up -->
@@ -805,7 +816,31 @@
     </footer>
 
     <script src="js/popup.js"></script> <!--link par o pop-up-->
-    
+
+   
+<!----------------------------------------------------------Alexa---------------------------------------------------------->        
+<script>
+    document.getElementById('btn-alexa-victor').addEventListener('click', function(e) {
+        
+        e.preventDefault();   // ← Isso impede de abrir a página
+
+        const url = "https://api-v2.voicemonkey.io/announcement?token=222b035b951fc5148d84ce78f21e7cd4_4a280a33869636e1799928574e055c34&device=victor-andrio";
+
+        fetch(url, {
+            method: 'GET',
+            mode: 'no-cors'   // necessário para APIs externas como VoiceMonkey
+        })
+        .then(() => {
+            // Feedback visual (pode mudar depois)
+            alert("✅ Comando enviado para a Alexa!");
+        })
+        .catch(() => {
+            alert("❌ Erro ao enviar o comando.");
+        });
+    });
+</script>
+
+
 </body>
 
 </html>
