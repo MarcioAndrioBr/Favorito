@@ -126,6 +126,19 @@
     width: 100%;             /* Faz a caixa respeitar o limite da section */
     box-sizing: border-box;  /* Garante que o padding não "estoure" a largura */
 }
+.caixa-relogio {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones dentro da caixa */
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.03);/**/
+    border: 1px solid rgba(255, 255, 255, 0.1); /**/
+    width: 100%;             /* Faz a caixa respeitar o limite da section */
+    box-sizing: border-box;  /* Garante que o padding não "estoure" a largura */
+}
+
 /*-----------------------------------------------------Botões-----------------------------------------------------*/
 section {
     display: flex;
@@ -244,77 +257,38 @@ span{
 
 /*-----------------------------------------------------Relógio e Calendário-----------------------------------------------------*/
 #calendario {
-    width: 280px;
-    background: transparent;
-}
-
-.mes {
-    background-color: transparent !important; /* Remove o fundo sólido */
-    color: white;
+    margin-top: 15px;
     font-size: 18px;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.semana {
-    background-color: transparent !important;
-    color: #888;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
-.dias span.hoje {
-    background-color: #d32f2f; /* Vermelho jurídico */
-    border-radius: 8px; /* Quadrado arredondado em vez de círculo total */
-    font-weight: bold;
-}
-.dias span.hoje {
-    background-color: #e74c3c; /* Vermelho vivo para o dia atual */
-    box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
-}
-
-.dias {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    font-family: 'Courier New', monospace;
+    color: #ff3b3b;
     text-align: center;
-}
-#relogio {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid rgb(252, 252, 252);
-    position: relative; /* Alterado para relative */
-    z-index: 9999;
-}
-#ponteiro-hora, #ponteiro-minuto, #ponteiro-segundo {
-    position: absolute;
-    transform-origin: bottom center;
-}
-#ponteiro-hora {
-    width: 6px;
-    height: 50px;
-    background-color: rgb(253, 253, 253);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-}
-#ponteiro-minuto {
-    width: 4px;
-    height: 70px;
-    background-color: rgb(225, 26, 26);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-}
-#ponteiro-segundo {
-    width: 2px;
-    height: 90px;
-    background-color: rgb(121, 113, 218);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
+    letter-spacing: 2px;
+
+    /* efeito neon */
+    text-shadow: 
+        0 0 5px #ff3b3b,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
 }
 
+#relogio-digital {
+    margin-top: 20px;
+    font-size: 32px;
+    font-family: 'Courier New', monospace;
+    color: #ff3b3b;
+    text-align: center;
+
+    /* efeito neon */
+    text-shadow: 
+        0 0 5px #ff3b3b,
+        0 0 10px #ff3b3b,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000,
+        0 0 80px #ff0000;
+
+    letter-spacing: 3px;
+}
 /*-----------------------------------------------------Estilo do pop-up-----------------------------------------------------*/
 .popup {  
     display: none; /**/

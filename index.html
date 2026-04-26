@@ -214,17 +214,9 @@
 
 <!----------------------------------------------------------Relógio---------------------------------------------------------->        
         <h1 id="hora">Relógio</h1>
-        <div class="caixa-icone">
-            <div class="relogio-calendario">
-        <div id="relogio">
-            <div id="ponteiro-hora"></div>
-            <div id="ponteiro-minuto"></div>
-            <div id="ponteiro-segundo"></div>
-        </div>
-        <div>
-            <div id="calendario"></div>
-        </div>
-            </div>
+        <div class="caixa-relogio">
+                <div id="relogio-digital"></div>
+                <div id="calendario"></div>
         </div>    
 
 <!----------------------------------------------------------Valores Praticados---------------------------------------------------------->        
@@ -889,6 +881,41 @@
             alert("❌ Erro ao enviar o comando.");
         });
     });
+/*----------------------------------------------------------Relógio----------------------------------------------------------*/
+
+function atualizarRelogioDigital() {
+    const agora = new Date();
+
+    let horas = agora.getHours().toString().padStart(2, '0');
+    let minutos = agora.getMinutes().toString().padStart(2, '0');
+    let segundos = agora.getSeconds().toString().padStart(2, '0');
+
+    const relogioDigital = document.getElementById("relogio-digital");
+    relogioDigital.innerText = `${horas}:${minutos}:${segundos}`;
+}
+
+setInterval(atualizarRelogioDigital, 1000);
+atualizarRelogioDigital();
+
+/*----------------------------------------------------------Data----------------------------------------------------------*/
+function atualizarCalendario() {
+    const agora = new Date();
+
+    const diasSemana = ["domingo", "segunda", "terça", "quarta", "quinata", "sexta", "sábado"];
+    const meses = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", 
+                   "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+
+    const diaSemana = diasSemana[agora.getDay()];
+    const dia = agora.getDate();
+    const mes = meses[agora.getMonth()];
+    const ano = agora.getFullYear();
+
+    const calendario = document.getElementById("calendario");
+    calendario.innerText = `${diaSemana} ${dia} ${mes} ${ano}`;
+}
+
+setInterval(atualizarCalendario, 1000);
+atualizarCalendario();
 </script>
 
 
