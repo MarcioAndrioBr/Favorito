@@ -1,62 +1,165 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emissão de Recibos Verdes</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<style>
+body {
+    margin: 0; /* remove margem padrão do navegador */
+    font-family: Arial, sans-serif; /* fonte do site */
+    /*background: #f2f2f2; /*acinzentado*/
+    background: #fafafa; /*mais neutro*/
+    color: #333333; /* cor padrão dos textos */
+    /* espaço para header e footer fixos */
+    padding-top: 300px; /**/
+    padding-bottom: 140px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    background: #f2f2f2; /*acinzentado*/
+    /*background: #fafafa; /*mais neutro*/
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    z-index: 1000;
+/**/    
+}
+.home-imagem {
+    max-width: 220px;
+    height: auto;
+    display: block;
+/**/
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24pt;
+    color: #4a0e1b;
+/**/
+}
+.caixa {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+/**/
+}
+.lista {
+    width: 800px;
+    max-width: 90%;
+    text-align: left;
+    font-size: 16px;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fefefe;
+    color: #050505;
+    /*box-shadow: 0 4px 12px rgba(239, 237, 237, 0.2); /**/
+    line-height: 1.8;
+/**/
+}
+.rodape {
+    position: fixed; /**/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f2f2f2; /*acinzentado*/
+    /*background: #fafafa; /*mais neutro*/
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 10px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+.titulo-rodape-texto p,
+.titulo-rodape-texto h2 {
+    margin: 8px 0; /**/
+}
+.titulo-rodape-texto h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+.icones {
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+    /*filter: invert(1); /**/
+}
+.rodape a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+</style>
+
+<header>
+    <img class="home-imagem"
+         src="png/logositema.png"
+         alt="Logo do escritório"
+         loading="lazy">
+</header>
 <body>
-    <section>
-        <h1>Serviços Advocatícios</h1>
-        <h3>Faturas e recibos;</h3>
-        <h3>Emitir</h3>
-        <h3>Fatura-recibo</h3>
-        <h3>Data, fatura-recibo, emitir</h3>
+<h1>Emissão de Recibos Verdes</h1>
+    <div class="caixa">
+    <div class="lista">
 
-        <h2>Adquirente</h2>
-        <p>NIF e Nome do cliente, o endereço e opcional</p>
 
-        <h2>Motivo da Emissão</h2>
-        <p>Pagamento de bens ou serviços</p>
+        Serviços Advocatícios <br>
+        <span style="margin-left:40px;"> <i>- Faturas e recibos;</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Emitir;</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Fatura-Recibo;</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Data, Fatura-Recibo, Emitir;</i></span> <br> <br>
 
-        <h2>Produtos, Serviços ou Outros</h2>
+        Adquirente <br>
+        <span style="margin-left:40px;"> <i>- Nif e Nome do cliente, o endereço e opcional;</i></span> <br> <br>
 
-        <div class="tabela">
-            <table border="1">
-                <tr>
-                    <td>ADICIONAR</td>
-                </tr>
-            </table>
-        </div>
+        Motivo da Emissão <br>
+        <span style="margin-left:40px;"> <i>- Pagamento de bens ou serviços;</i></span> <br> <br>        
+        
+        Produtos, Serviços ou Outros <br><br>
 
-        <h3>Tipo: serviço</h3>
-        <h3>Tipo Ref.: Outro</h3>
-        <h3>Referência: Serviços Advocatícios</h3>
-        <h3>Descrição: Serviços Advocatícios</h3>
-        <H3>Quantidade: 1</H3>
-        <h3>Unidade: N/A - Não Aplicável</h3>
-        <h3>Preço Unitário: *colocar o valor</h3>
-        <h3>Taxa IVA: 0%</h3>
-        <h3>Motivo de Isenção: IVA - Regime de isenção - Artigo 53º do CIVA</h3>
+        Adicionar <br>
+        <span style="margin-left:40px;"> <i>- Tipo: serviço</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Tipo Ref.: Outro</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Referência: Serviços Advocatícios</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Descrição: Serviços Advocatícios</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Quantidade: 1</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Unidade: N/A - Não Aplicável</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Preço Unitário: *colocar o valor</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Taxa IVA: 23% (valor / 1.23 = recibo)</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Motivo de Isenção: IVA - Regime de isenção - Artigo 53º do CIVA</i></span> <br>
+        Guardar <br> <br>
 
-        <div class="tabela">
-            <table border="1">
-                <tr>
-                    <td>GUARDAR</td>
-                </tr>
-            </table>
-        </div>
+        IRS <br>
+        <span style="margin-left:40px;"> <i>- Base de incidência em IRS</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Dispensa de isenção – art. 101 B, nº1 al, a) e b) do CIRS;</i></span> <br > <br>
 
-        <h2>IRS</h2> 
-        <p>Base de incidência em IRS</p>
-        <h3>•Dispensa de isenção – art. 101 B, nº1 al, a) e b) do CIRS;</h3>
+        Emitir<br>        
+        <span style="margin-left:40px;"> <i>- Imprimir</i></span> <br>
+        <span style="margin-left:40px;"> <i>- Salvar com o nome:</i></span> <br>
+        <span style="margin-left:40px;"> <i>- 01. Recibo Verde - JAN - Fulano - € 00,00.pdf</i></span> <br>
 
-        <h2>Emitir</h2>
-        <h2>Imprimir</h2>
-        <p>Salvar com o nome:</p>
-        <h3><span class="italico">01. Recibo Verde - JAN - Fulano - € 00,00.pdf</span></h3>
-        <h4>_______</h4>
-    </section>
+
+
+    </div>
+    </div>
+
+<footer class="rodape">
+    <div class="titulo-rodape-texto">
+        <p>
+            <img src="https://img.icons8.com/ios-filled/50/000000/phone.png"
+                 alt="Telefone"
+                 class="icones">
+            +351 960 389 573
+        </p>
+        <p>
+            <img src="https://img.icons8.com/ios-filled/50/000000/email.png"
+                 alt="Email"
+                 class="icones">
+            <a href="mailto:marcio.andrio@ma-advocacia.com">
+                marcio.andrio@ma-advocacia.com
+            </a>
+        </p>
+        <h2>
+            © 2025 Marcio Andrio Advocacia. Todos os direitos reservados.
+        </h2>
+    </div>
+</footer>
+
 </body>
-</html>
