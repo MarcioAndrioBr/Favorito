@@ -26,8 +26,48 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
-        padding: 16px;
+        gap: 12px;
+        padding: 12px;
+    }
+    section {
+        max-width: 100%;
+    }
+    .caixa-icone {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+    .caixa-relogio {
+        flex-direction: column;
+        gap: 6px;
+        padding: 18px;
+    }
+    .targeta {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+    }
+    .botao {
+        width: 70px;
+    }
+    span {
+        font-size: 10px;
+        max-width: 60px;
+    }
+    h1 {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+    #relogio-digital {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+    #calendario {
+        font-size: 13px;
+        letter-spacing: 1px;
     }
 }
 
@@ -313,3 +353,21 @@ footer { margin-bottom: 20px; }
 }
 
 html { scroll-behavior: smooth; }
+
+/* ── Mobile overrides (após regras base) ─────────────── */
+@media (max-width: 768px) {
+    .targeta {
+        width: 52px;
+        height: 52px;
+    }
+    .botao {
+        width: 70px;
+    }
+    .caixa-icone {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+}
