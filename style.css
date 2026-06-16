@@ -116,7 +116,7 @@ h1 {
 /* ── Icon grid ────────────────────────────────────────── */
 .caixa-icone {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
     padding: 20px;
@@ -267,6 +267,65 @@ span {
 
 footer { margin-bottom: 20px; }
 
+/* ── Nav search ───────────────────────────────────────── */
+.nav-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.nav-pesquisa input {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    color: #e8e8e8;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    padding: 5px 10px;
+    width: 160px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.nav-pesquisa input::placeholder { color: rgba(255,255,255,0.4); }
+
+.nav-pesquisa input:focus {
+    background: rgba(255,255,255,0.13);
+    border-color: var(--accent);
+    width: 200px;
+}
+
+.nav-limpar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: color 0.2s;
+}
+.nav-limpar:hover { color: var(--accent); }
+
+@media (max-width: 768px) {
+    .nav-pesquisa {
+        margin-left: 0;
+        width: 100%;
+        padding: 8px 16px 4px;
+    }
+    .nav-pesquisa input {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .nav-pesquisa input:focus { width: 100%; }
+}
+
 /* ── Nav ──────────────────────────────────────────────── */
 .nav-topo {
     position: fixed;
@@ -366,7 +425,7 @@ html { scroll-behavior: smooth; }
     .caixa-icone {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         gap: 8px;
         padding: 12px;
     }

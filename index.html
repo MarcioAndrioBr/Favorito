@@ -31,6 +31,10 @@
             <a href="#sec-ia">IA</a>
             <a href="#sec-arquivos">Arquivos</a>
         </div>
+        <div class="nav-pesquisa">
+            <input type="text" id="campoPesquisa" placeholder="🔍 Pesquisar..." oninput="pesquisarFavoritos()" autocomplete="off">
+            <button class="nav-limpar" id="btnLimpar" onclick="limparPesquisa()" title="Limpar">✕</button>
+        </div>
     </nav>
 
     <main class="site">
@@ -970,6 +974,28 @@
 </footer>
     <script src="js/popup.js"></script>
     <script>
+    function pesquisarFavoritos() {
+        const filtro = document.getElementById('campoPesquisa').value.toLowerCase().trim();
+        const btnLimpar = document.getElementById('btnLimpar');
+        btnLimpar.style.display = filtro ? 'flex' : 'none';
+
+        document.querySelectorAll('.botao').forEach(function(botao) {
+            const texto = botao.querySelector('span') ? botao.querySelector('span').innerText.toLowerCase() : '';
+            botao.style.display = (!filtro || texto.includes(filtro)) ? 'flex' : 'none';
+        });
+
+        document.querySelectorAll('section').forEach(function(sec) {
+            const visiveis = sec.querySelectorAll('.botao[style*="flex"], .botao:not([style])');
+            const algumVisivel = Array.from(sec.querySelectorAll('.botao')).some(b => b.style.display !== 'none');
+            sec.style.display = (!filtro || algumVisivel) ? 'flex' : 'none';
+        });
+    }
+
+    function limparPesquisa() {
+        document.getElementById('campoPesquisa').value = '';
+        pesquisarFavoritos();
+    }
+
     function toggleNav() {
         const links = document.getElementById('navLinks');
         links.classList.toggle('aberto');
